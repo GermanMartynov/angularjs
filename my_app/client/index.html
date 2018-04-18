@@ -8,15 +8,15 @@
 </style>
 </head>
 <body ng-controller="phoneController">
-  <div>
-    <ng-include src="'phonesList.html'"></ng-include>
+  <div ng-controller="phoneController">
+    <div ng-repeat="button in modes">
+      <label>
+        <input type="radio" ng-model="data.mode" value="{{button.value}}" name="modes" />
+        {{button.label}}
+      </label>
+    </div>
+    <div ng-include="setFile()"></div>
   </div>
-
-  <div>
-    <p>Количество элементов: <span ng-bind="phones.length"></span></p>
-    <p>Первый элемент: <span ng-bind="phones[0].name"></span></p>
-  </div>
-
 <script src="js/angular-1.6.9/angular.min.js"></script>
 <script type="text/javascript">
 angular.module('myApp', []);
