@@ -1,0 +1,8 @@
+<ul>
+    <li ng-repeat="device in phones">
+        <p>{{device.company.name}}</p>
+            <p ng-bind-template="{{device.name}}: {{device.price}} $"></p>
+            <input type="text" ng-model="device.name" / >
+        </ul>
+    </li>
+</ul>

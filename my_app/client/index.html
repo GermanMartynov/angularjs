@@ -9,24 +9,12 @@
 </head>
 <body ng-controller="phoneController">
   <div>
-      <ul>
-          <li ng-repeat="device in phones">
-              <p>{{device.company.name}}</p>
-                  <p ng-bind-template="{{device.name}}: {{device.price}} $"></p>
-                  <input type="text" ng-model="device.name" / >
-              </ul>
-          </li>
-      </ul>
+    <ng-include src="'phonesList.html'"></ng-include>
   </div>
 
   <div>
     <p>Количество элементов: <span ng-bind="phones.length"></span></p>
     <p>Первый элемент: <span ng-bind="phones[0].name"></span></p>
-  </div>
-
-  <div>
-    <input type="text" ng-model="phones[0].name" / >
-    <p ng-bind="phones[0].name"></p>
   </div>
 
 <script src="js/angular-1.6.9/angular.min.js"></script>
