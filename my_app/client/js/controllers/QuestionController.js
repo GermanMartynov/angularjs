@@ -1,15 +1,15 @@
 var myApp = angular.module('myApp');
 myApp.controller('QuestionController', function($scope) {
-  $scope.sortparam='rate';
+  $scope.sortparam='-rate';
   $scope.question = {
-      text: 'Какой js-фреймворк лучше использовать?',
+        text: 'Какой js-фреймворк лучше использовать?',
         author: 'Иван Иванов',
         date: '20/10/2013',
         answers:
         [{
             text: 'AngularJS!',
             author: 'Вова Сидоров',
-            date: '20/10/2013',
+            date: '19/10/2013',
             rate:2
         },{
             text: 'AngularJS лучше всех',
