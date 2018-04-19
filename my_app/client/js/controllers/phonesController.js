@@ -33,7 +33,7 @@ myApp.controller('phoneController', function($scope) {
         price: 220,
         company: 'Lenovo'
     }];
-  $scope.data = {};
+  $scope.data = {visible : false};
   $scope.setFile = function () {
     if($scope.data.mode=='Tablets')
         return 'tabletsList.html';

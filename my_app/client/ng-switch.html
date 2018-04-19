@@ -35,6 +35,13 @@
         </div>
     </div>
 </div>
+
+<div ng-controller="phoneController">
+<p ng-show="data.visible">Первый блок</p>
+<p ng-hide="data.visible">Второй блок</p>
+<input type="checkbox" ng-model="data.visible">Открыть/скрыть
+</div>
+
 <script src="js/lib/angular.min.js"></script>
 <script type="text/javascript">
 var myApp = angular.module('myApp', []);
