@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp');
+var myApp = angular.module('questApp');
 myApp.controller('QuestionController', function($scope) {
   $scope.sortparam='-rate';
   $scope.question = {
@@ -21,7 +21,12 @@ myApp.controller('QuestionController', function($scope) {
             author: 'Неизвестный',
             date: '21/10/2013',
             rate:0
-        }]
+        },{
+                text: 'фигасе квестшен',
+                author: 'Неизвестный',
+                date: '22/10/2013',
+                rate:0
+            }]
   };
   $scope.voteUp = function (answer) {
     answer.rate++;
